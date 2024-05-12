@@ -2,8 +2,14 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+app.use(express.static('public'))
+
 app.get('/', (req, res) => {
-  res.send('express app for password')
+  res.redirect('/random_password_generator')
+})
+
+app.get('/random_password_generator', (req, res) => {
+  res.send('password')
 })
 
 app.listen(port, () => {
