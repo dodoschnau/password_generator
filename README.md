@@ -24,3 +24,8 @@ npm install
 npm run start
 ```
 5. Open your browser and visit http://localhost:3000 to start using the program.
+
+---
+## Project Interface
+![image](https://github.com/dodoschnau/password_generator/assets/167064528/b175d5d9-5c5a-421b-abdf-25b99ad6ef7b)
+
