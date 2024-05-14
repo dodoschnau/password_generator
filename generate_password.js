@@ -36,7 +36,7 @@ function generatePassword(data) {
   }
 
   // if collection is empty, return error message
-  if (collection.length === 0) {
+  if (collection.length === 0 || data.passwordLength < 4 || data.passwordLength > 16) {
     return "There is no valid characters in your selection.";
   }
 
