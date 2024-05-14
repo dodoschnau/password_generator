@@ -18,7 +18,7 @@
             </div>
             <div class="col-sm-7">
               <input name="passwordLength" type="number" class="form-control" id="passwordLength" min="4" max="16"
-                required>
+                value={{options.passwordLength}} required>
               <div id="password-length-Help" class="form-text">Length is available between 4 ~ 16</div>
             </div>
           </div>
@@ -29,7 +29,8 @@
         <div class="row mb-3 d-flex ">
           <div class="col-sm-5">Include Lowercase Characters</div>
           <div class="col-sm-7">
-            <input type="checkbox" class="form-check-input" name="lowercase" id="lowercase">
+            <input type="checkbox" class="form-check-input" name="lowercase" id="lowercase" {{#if
+              options.lowercase}}checked{{/if}}>
             <label class="form-check-label" for="lowercase">(e.g. abcdefg...)</label>
           </div>
         </div>
@@ -38,7 +39,8 @@
         <div class="row mb-3 d-flex ">
           <div class="col-sm-5">Include Uppercase Characters</div>
           <div class="col-sm-7">
-            <input type="checkbox" class="form-check-input" name="uppercase" id="uppercase">
+            <input type="checkbox" class="form-check-input" name="uppercase" id="uppercase" {{#if
+              options.uppercase}}checked{{/if}}>
             <label class="form-check-label" for="uppercase">(e.g. ABCDEFG...)</label>
           </div>
         </div>
@@ -47,7 +49,8 @@
         <div class="row mb-3 d-flex ">
           <div class="col-sm-5">Include Numbers</div>
           <div class="col-sm-7">
-            <input type="checkbox" class="form-check-input" name="number" id="number">
+            <input type="checkbox" class="form-check-input" name="number" id="number" {{#if
+              options.number}}checked{{/if}}>
             <label class="form-check-label" for="number">(e.g. 123456...)</label>
           </div>
         </div>
@@ -56,7 +59,8 @@
         <div class="row mb-3 d-flex ">
           <div class="col-sm-5">Include Symbols</div>
           <div class="col-sm-7">
-            <input type="checkbox" class="form-check-input" name="symbol" id="symbol">
+            <input type="checkbox" class="form-check-input" name="symbol" id="symbol" {{#if
+              options.symbol}}checked{{/if}}>
             <label class="form-check-label" for="symbol">(e.g. @#$%...)</label>
           </div>
         </div>
@@ -64,7 +68,7 @@
         <!--     Exclude Characters       -->
         <div class="mb-3">
           <label for="excludeChar" class="form-label">Exclude Characters</label>
-          <input type="text" class="form-control" name="excludeChar" id="excludeChar">
+          <input type="text" class="form-control" name="excludeChar" id="excludeChar" value={{options.excludeChar}}>
           <div id="excludeHelp" class="form-text">These characters will not appear in the password</div>
         </div>
 

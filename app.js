@@ -21,8 +21,9 @@ app.get('/random_password_generator', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  const password = generatePassword(req.body)
-  res.render('home', { password: password })
+  const options = req.body
+  const password = generatePassword(options)
+  res.render('home', { password: password, options: options })
 })
 
 app.listen(port, () => {
