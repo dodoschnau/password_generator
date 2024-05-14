@@ -8,7 +8,7 @@
 
       <hr> <!--     分隔線     -->
 
-      <form action="post" method="/index" novalidate>
+      <form method="post" action="/" novalidate>
 
         <!--      Password Length      -->
         <div class="mb-3">
@@ -67,6 +67,12 @@
           <input type="text" class="form-control" name="excludeChar" id="excludeChar">
           <div id="excludeHelp" class="form-text">These characters will not appear in the password</div>
         </div>
+
+        {{#if password}}
+        <div class="alert alert-primary" role="alert">
+          <span>Your password is : </span> <code>{{password}}</code>
+        </div>
+        {{/if}}
 
         <button type="submit" class="btn btn-success" id="submit-btn">Generate Password</button>
       </form>
